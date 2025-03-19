@@ -35,7 +35,7 @@ public class Locators extends Base {
 		
 		//for lengthly artibute value
 		
-		WebElememt lengthly=driver.findElement(By.xpath("//input[contains(@id,'-a')]")); //syntax:  //tagname[contains(@attribute,'partial value')]
+		WebElement lengthly=driver.findElement(By.xpath("//input[contains(@id,'-a')]")); //syntax:  //tagname[contains(@attribute,'partial value')]
 		
 		//locate using text
 		WebElement text=driver.findElement(By.xpath("//button[text()='Show Message']")); //sytax: //tagname[text()='text value']
@@ -50,7 +50,7 @@ public class Locators extends Base {
 		
 		WebElement button3=driver.findElement(By.xpath("//div[contains(text(),'Single Input Field')]//parent::div[@class='card']"));//  //tagname[@attribute=’value’]//axesMethodName::tagname
 		
-		WebElement button4=driver.findElement(By.xpath("//div['class=\"card']//child::input[@id='single-input-field']")); child use find cheyan
+		WebElement button4=driver.findElement(By.xpath("//div['class=\"card']//child::input[@id='single-input-field']")); //child use find cheyan
 		 
 		WebElement button5=driver.findElement(By.xpath("//div[@class='card-header']//preceding::div[@class='card-body']"));
 	}

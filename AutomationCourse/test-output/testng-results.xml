@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-02-20T14:01:16 IST" name="Suite" finished-at="2025-02-20T14:01:58 IST" duration-ms="41952">
+    <groups>
+    </groups>
+    <test started-at="2025-02-20T14:01:16 IST" name="Test" finished-at="2025-02-20T14:01:58 IST" duration-ms="41952">
+      <class name="seleniumBasics.LoginTest">
+        <test-method is-config="true" signature="initialiseBrowser()[pri:0, instance:seleniumBasics.LoginTest@7e6f74c]" started-at="2025-02-20T14:01:16 IST" name="initialiseBrowser" finished-at="2025-02-20T14:01:23 IST" duration-ms="6841" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialiseBrowser -->
+        <test-method signature="verifyUserLoginWithInValidUsernameAndValidPassword()[pri:1, instance:seleniumBasics.LoginTest@7e6f74c]" started-at="2025-02-20T14:01:23 IST" name="verifyUserLoginWithInValidUsernameAndValidPassword" finished-at="2025-02-20T14:01:25 IST" duration-ms="1670" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserLoginWithInValidUsernameAndValidPassword -->
+        <test-method is-config="true" signature="close()[pri:0, instance:seleniumBasics.LoginTest@7e6f74c]" started-at="2025-02-20T14:01:25 IST" name="close" finished-at="2025-02-20T14:01:25 IST" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method is-config="true" signature="initialiseBrowser()[pri:0, instance:seleniumBasics.LoginTest@7e6f74c]" started-at="2025-02-20T14:01:25 IST" name="initialiseBrowser" finished-at="2025-02-20T14:01:31 IST" duration-ms="5940" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialiseBrowser -->
+        <test-method signature="verifyUserLoginWithValidUsernameAndValidPassword()[pri:2, instance:seleniumBasics.LoginTest@7e6f74c]" started-at="2025-02-20T14:01:31 IST" name="verifyUserLoginWithValidUsernameAndValidPassword" finished-at="2025-02-20T14:01:33 IST" duration-ms="2401" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserLoginWithValidUsernameAndValidPassword -->
+        <test-method is-config="true" signature="close()[pri:0, instance:seleniumBasics.LoginTest@7e6f74c]" started-at="2025-02-20T14:01:33 IST" name="close" finished-at="2025-02-20T14:01:33 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method is-config="true" signature="initialiseBrowser()[pri:0, instance:seleniumBasics.LoginTest@7e6f74c]" started-at="2025-02-20T14:01:33 IST" name="initialiseBrowser" finished-at="2025-02-20T14:01:40 IST" duration-ms="6880" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialiseBrowser -->
+        <test-method signature="verifyUserLoginWithInValidUsernameAndInValidPassword()[pri:3, instance:seleniumBasics.LoginTest@7e6f74c]" started-at="2025-02-20T14:01:40 IST" name="verifyUserLoginWithInValidUsernameAndInValidPassword" finished-at="2025-02-20T14:01:46 IST" duration-ms="5499" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserLoginWithInValidUsernameAndInValidPassword -->
+        <test-method is-config="true" signature="close()[pri:0, instance:seleniumBasics.LoginTest@7e6f74c]" started-at="2025-02-20T14:01:46 IST" name="close" finished-at="2025-02-20T14:01:46 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method is-config="true" signature="initialiseBrowser()[pri:0, instance:seleniumBasics.LoginTest@7e6f74c]" started-at="2025-02-20T14:01:46 IST" name="initialiseBrowser" finished-at="2025-02-20T14:01:54 IST" duration-ms="8655" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialiseBrowser -->
+        <test-method signature="verifyUserLoginWithValidUsernameAndInValidPassword()[pri:4, instance:seleniumBasics.LoginTest@7e6f74c]" started-at="2025-02-20T14:01:54 IST" name="verifyUserLoginWithValidUsernameAndInValidPassword" finished-at="2025-02-20T14:01:58 IST" duration-ms="3811" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserLoginWithValidUsernameAndInValidPassword -->
+        <test-method is-config="true" signature="close()[pri:0, instance:seleniumBasics.LoginTest@7e6f74c]" started-at="2025-02-20T14:01:58 IST" name="close" finished-at="2025-02-20T14:01:58 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+      </class> <!-- seleniumBasics.LoginTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
