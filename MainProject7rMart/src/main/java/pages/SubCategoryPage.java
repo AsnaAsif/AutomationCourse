@@ -16,8 +16,7 @@ public class SubCategoryPage {
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
 	}
-	@FindBy (xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/list-sub-category' and @class=' nav-link']")
-	private WebElement subCategoryClick;
+	
 	
 	@FindBy (xpath="//a[@onclick='click_button(1)']")
 	private WebElement newClick; 
@@ -59,37 +58,51 @@ public class SubCategoryPage {
 	private WebElement listSubCategoryIsDisplayed;
 	 
 	
-	public void clickOnSubCategoryButton()
+	/*public void  clickOnSubCategoryButton()
 	{
 		subCategoryClick.click();
-	}
+	}*/
 	
-	public void ClickonNewClick()
+	public SubCategoryPage ClickonNewClick()
 	{
 		newClick.click();
+		return this;
 	}
-	public void clickOnCategory(String categoryClick1)
+	public SubCategoryPage clickOnCategory(String categoryClick1)
 	{
 		Select select=new Select(categoryClick);
 		select.selectByValue(categoryClick1);
+		return this;
+
 	}
-	public void clickONSubCategory(String subcategory)
+	public SubCategoryPage clickONSubCategory(String subcategory)
 	{
 		subCategoryClick1.sendKeys(subcategory);
+		return this;
+
 	}
-	public void toUploadImage(String uploadImagepath)
+	public SubCategoryPage toUploadImage(String uploadImagepath)
 	{
 		uploadImage.sendKeys(uploadImagepath);
+		return this;
+
 	}
-	
-	public void toSave()
+	//public SubCategoryPage selectImageOfSubCategoryCreationPage() {
+	//imageUploadButton.sendKeys(Constants.IMAGEFILE);
+	//return this;
+//}
+	public SubCategoryPage toSave()
 	{
 		saveClick.click();
+		return this;
+
 	}
 	
-	public void clickOnSubCategorySearch()
+	public SubCategoryPage clickOnSubCategorySearch()
 	{
 		SubcategorySearch.click();
+		return this;
+
 	}
 	
 	public SubCategoryPage  selectCategory()
@@ -100,19 +113,25 @@ public class SubCategoryPage {
 	
 	}
 	
-	public void SearchCategory(String searchCategory)
+	public SubCategoryPage SearchCategory(String searchCategory)
 	{
 		subcategory.sendKeys(searchCategory);
+		return this;
+
 	}
 	
-	public void clickOnsearchButton()
+	public SubCategoryPage clickOnsearchButton()
 	{
 		search.click();
+		return this;
+
 	}
 	
-	public void clickOnResetButton()
+	public SubCategoryPage clickOnResetButton()
 	{
 		reset.click();
+		return this;
+
 	}
 	
 	public boolean isSubCtegoryAddAlertDisplayed()

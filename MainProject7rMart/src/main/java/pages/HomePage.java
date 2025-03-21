@@ -28,6 +28,9 @@ public class HomePage  {
 	@FindBy(xpath = "//i[@class='nav-icon fas fa-users']")
 	private WebElement adminusers;
 	
+	@FindBy (xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/list-sub-category' and @class=' nav-link']")
+	private WebElement subCategoryClick;
+	
 	public HomePage verifyAdminClick()
 	{
 		clickAdmin.click();
@@ -56,5 +59,10 @@ public class HomePage  {
 		adminusers.click();
 		return new AdminUserPage(driver);
 			
+	}
+	public SubCategoryPage  clickOnSubCategoryButton()
+	{
+		subCategoryClick.click();
+		return new SubCategoryPage(driver); 
 	}
 }

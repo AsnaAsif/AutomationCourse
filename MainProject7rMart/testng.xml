@@ -3,12 +3,12 @@
 <suite name="Suite">
 	<parameter name="browser" value="chrome"></parameter>
 	<listeners>
-		<listener class-name="listener.Listener">
+		<listener class-name="listeners.Listener">
 		</listener>
 	</listeners>
 	<test thread-count="5" name="Test">
 		<classes>
-			<class name="testScript.LoginTest">
+			<class name="testscript.LoginTest">
 			</class>
 		</classes>
 	</test> <!-- Test -->

@@ -7,16 +7,10 @@ import org.testng.ITestResult;
 
 public class Retry implements IRetryAnalyzer {
 
-private static final Logger LOG = (Logger) LogManager.getLogger("Retry.class"); 
+	private static final Logger LOG = (Logger) LogManager.getLogger("Retry.class");
 
-	
-
-	private static final int maxTry = 2;//maxtry used how many time reexecute                                                       c
+	private static final int maxTry = 2;// maxtry used how many time reexecute c
 	private int count = 0;
-
-	
-
-
 
 	@Override
 
@@ -30,7 +24,7 @@ private static final Logger LOG = (Logger) LogManager.getLogger("Retry.class");
 
 						+ getResultStatusName(iTestResult.getStatus()) + " for the " + (this.count + 1) + " time(s).");
 
-				this.count++;//to count home time reexecute
+				this.count++;// to count home time reexecute
 
 				return true;
 
@@ -41,8 +35,6 @@ private static final Logger LOG = (Logger) LogManager.getLogger("Retry.class");
 		return false;
 
 	}
-
-
 
 	public String getResultStatusName(final int status) {
 

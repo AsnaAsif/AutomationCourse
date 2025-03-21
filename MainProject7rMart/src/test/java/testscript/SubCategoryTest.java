@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 
 import automationcore.Base;
 import constants.Messages;
+import pages.HomePage;
 import pages.LoginPage;
 import pages.SubCategoryPage;
 import utilities.ExcelUtilities;
@@ -53,22 +54,21 @@ public class SubCategoryTest extends Base {
 		String username=ExcelUtilities.readStringData(1, 0,"LoginPage");
 		String password=ExcelUtilities.readStringData(1, 1,"LoginPage");
 		LoginPage login=new LoginPage(driver);
-		login.enterUsernameOnUsernameField(username);
-		login.enterPasswordOnPassWordField(password);
-		login.clickOnRememberMe();
-		login.clickOnSignIN();
+		login.enterUsernameOnUsernameField(username).enterPasswordOnPassWordField(password).clickOnRememberMe();
+		HomePage hometest;
+		hometest =login.clickOnSignIN();
 		
 		String subcategory=ExcelUtilities.readStringData(1, 0,"SubCatregory");
 		String uploadImagepath=ExcelUtilities.readStringData(1, 1,"SubCatregory");
 		String categoryClick1=ExcelUtilities.readIntegerData(1, 2,"SubCatregory");
 
-		SubCategoryPage subcategory1=new SubCategoryPage(driver);
-		subcategory1.clickOnSubCategoryButton();
-		subcategory1.ClickonNewClick();
-		subcategory1.clickOnCategory(categoryClick1);
-		subcategory1.clickONSubCategory(subcategory);
-		subcategory1.toUploadImage(uploadImagepath);
-		subcategory1.toSave();
+		//SubCategoryPage subcategory1=new SubCategoryPage(driver);
+		SubCategoryPage subcategory1;
+		subcategory1=hometest.clickOnSubCategoryButton();
+		
+	subcategory1.ClickonNewClick().clickOnCategory(categoryClick1).clickONSubCategory(subcategory).toUploadImage(uploadImagepath).toSave();
+	//subcategory1.selectImageOfSubCategoryCreationPage();
+		
 		
 		boolean isAddAlertDisplayed=subcategory1.isSubCtegoryAddAlertDisplayed();
 		Assert.assertTrue(isAddAlertDisplayed, Messages.SUBCATEGORYALERTNEWADD);
@@ -84,21 +84,16 @@ public class SubCategoryTest extends Base {
 		String username=ExcelUtilities.readStringData(1, 0,"LoginPage");
 		String password=ExcelUtilities.readStringData(1, 1,"LoginPage");
 		LoginPage login=new LoginPage(driver);
-		login.enterUsernameOnUsernameField(username);
-		login.enterPasswordOnPassWordField(password);
-		login.clickOnRememberMe();
-		login.clickOnSignIN();
-		
+		login.enterUsernameOnUsernameField(username).enterPasswordOnPassWordField(password).clickOnRememberMe();
+		HomePage hometest;
+		hometest =login.clickOnSignIN();
 		
 		String searchCategory=ExcelUtilities.readStringData(1,3,"SubCatregory");
 
 
-		SubCategoryPage subcategory1=new SubCategoryPage(driver);
-		subcategory1.clickOnSubCategoryButton();
-		subcategory1.clickOnSubCategorySearch();
-		subcategory1.selectCategory();
-		subcategory1.SearchCategory(searchCategory);
-		subcategory1.clickOnsearchButton();
+		SubCategoryPage subcategory1;
+		subcategory1=hometest.clickOnSubCategoryButton();
+		subcategory1.clickOnSubCategorySearch().selectCategory().SearchCategory(searchCategory).clickOnsearchButton();
 		
 		boolean isSearchAlertDisplayed=subcategory1.isSubCategorySearchAlertDisplayed();
 		Assert.assertTrue(isSearchAlertDisplayed, Messages.SUBCATEGORYALERTTOSEARCH);
@@ -109,13 +104,13 @@ public class SubCategoryTest extends Base {
 		String username=ExcelUtilities.readStringData(1, 0,"LoginPage");
 		String password=ExcelUtilities.readStringData(1, 1,"LoginPage");
 		LoginPage login=new LoginPage(driver);
-		login.enterUsernameOnUsernameField(username);
-		login.enterPasswordOnPassWordField(password);
-		login.clickOnRememberMe();
-		login.clickOnSignIN();
-
-		SubCategoryPage subcategory1=new SubCategoryPage(driver);
-		subcategory1.clickOnSubCategoryButton();
+		login.enterUsernameOnUsernameField(username).enterPasswordOnPassWordField(password).clickOnRememberMe();
+		HomePage hometest;
+		hometest =login.clickOnSignIN();
+		
+		
+		SubCategoryPage subcategory1;
+		subcategory1=hometest.clickOnSubCategoryButton();
 		subcategory1.clickOnResetButton();
 		
 		boolean IsSubCategoryListDisplayed=subcategory1.isSubCategoryListDisplayed();
