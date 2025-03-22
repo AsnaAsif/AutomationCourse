@@ -10,7 +10,7 @@
   </run>
   </groups>
   <classes>
-  <class name="testScript.LoginTest"/>
+  <class name="testscript.LoginTest"/>
   </classes>
   
   </test> <!-- Test -->

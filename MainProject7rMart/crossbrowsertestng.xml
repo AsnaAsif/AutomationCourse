@@ -5,7 +5,7 @@
 	<test thread-count="5" name="ChromeTest">
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
-			<class name="testScript.AdminUsersTest">
+			<class name="testscript.AdminUsersTest">
 				<methods>
 					<include
 						name="verifywhetherUserAbleToAddNewUserToTheUserListByUsingAddButtonInAdminPage"></include>
@@ -18,7 +18,7 @@
 	<test thread-count="5" name="FireFoxTest">
 		<parameter name="browser" value="firefox"></parameter>
 		<classes>
-			<class name="testScript.AdminUsersTest">
+			<class name="testscript.AdminUsersTest">
 				<methods>
 					<include
 						name="verifywhetherUserAbleToAddNewUserToTheUserListByUsingAddButtonInAdminPage"></include>
@@ -31,7 +31,7 @@
 	<test thread-count="5" name="EdgeTest">
 		<parameter name="browser" value="edge"></parameter>
 		<classes>
-			<class name="testScript.AdminUsersTest">
+			<class name="testscript.AdminUsersTest">
 				<methods>
 					<include
 						name="verifywhetherUserAbleToAddNewUserToTheUserListByUsingAddButtonInAdminPage"></include>

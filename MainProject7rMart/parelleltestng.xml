@@ -5,7 +5,7 @@
 
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
-			<class name="testScript.LoginTest">
+			<class name="testscript.LoginTest">
 				<methods>
 					<include
 						name="verifyWhetherUserAbleToLoginWithInValidUsernameAndValidPassword">
@@ -21,7 +21,7 @@
 
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
-			<class name="testScript.HomeTest">
+			<class name="testscript.HomeTest">
 				<methods>
 					<include name="verifySuccessfullyUserCanLogoutFromHomePage">
 

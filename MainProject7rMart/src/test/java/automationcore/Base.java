@@ -18,68 +18,53 @@ import utilities.ScreenShotUtility;
 import utilities.WaitUtility;
 
 public class Base {
-		Properties prop;
-		FileInputStream fs;
-		public WebDriver driver;
-		
-		@BeforeMethod(alwaysRun=true)
-		@Parameters("browser")
-		public void initiatiseBrower(String browser) throws Exception
+	Properties prop;
+	FileInputStream fs;
+	public WebDriver driver;
+
+	@BeforeMethod(alwaysRun = true)
+	@Parameters("browser")
+	public void initiatiseBrower(String browser) throws Exception {
+		prop = new Properties();
+		fs = new FileInputStream(Constants.CONFIGFILE);
+		prop.load(fs);
+		if (browser.equalsIgnoreCase("chrome")) {
+			driver = new ChromeDriver();
+
+		} else if (browser.equalsIgnoreCase("firefox")) {
+			driver = new FirefoxDriver();
+		} else if (browser.equalsIgnoreCase("edge")) {
+			driver = new EdgeDriver();
+		} else {
+			throw new Exception("invalid browser");
+
+		}
+
+		driver.get(prop.getProperty("url"));
+		driver.manage().window().maximize();
+		WaitUtility wait = new WaitUtility();
+		wait.implicitWait(driver);
+
+	}
+
+	@AfterMethod(alwaysRun = true)
+
+	public void driverQuit(ITestResult iTestResult) throws IOException
+
+	{
+
+		if (iTestResult.getStatus() == ITestResult.FAILURE)
+
 		{
-			prop=new Properties();
-			fs=new FileInputStream(Constants.CONFIGFILE);
-			prop.load(fs);
-			if(browser.equalsIgnoreCase("chrome"))
-			{
-				driver=new ChromeDriver();
-				
-			}
-			else if(browser.equalsIgnoreCase("firefox"))
-			{
-				driver=new FirefoxDriver();
-			}
-			else if(browser.equalsIgnoreCase("edge"))
-			{
-				driver=new EdgeDriver();
-			}
-			else 
-				{
-				throw new Exception("invalid browser");
-				
-				}
-	
-			driver.get(prop.getProperty("url"));
-			//driver.get("https://groceryapp.uniqassosiates.com/admin/login");
-			
-			driver.manage().window().maximize();
-			WaitUtility wait=new WaitUtility();
-			wait.implicitWait(driver);
-			
-			
-		}
-		
-		
-		@AfterMethod(alwaysRun=true)
 
-			public void driverQuit(ITestResult iTestResult) throws IOException
+			ScreenShotUtility screenShot = new ScreenShotUtility();
 
-			{
-
-			if(iTestResult.getStatus()==ITestResult.FAILURE)
-
-			{
-
-				ScreenShotUtility screenShot=new ScreenShotUtility();
-
-				screenShot.getScreenshot(driver, iTestResult.getName());
-
-			}
-
-				driver.quit();
-
-				
-
-			}
+			screenShot.getScreenshot(driver, iTestResult.getName());
 
 		}
 
+		driver.quit();
+
+	}
+
+}
