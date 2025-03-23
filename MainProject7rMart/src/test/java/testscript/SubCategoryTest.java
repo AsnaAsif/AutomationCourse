@@ -13,40 +13,6 @@ import pages.SubCategoryPage;
 import utilities.ExcelUtilities;
 
 public class SubCategoryTest extends Base {
-	
-	/*@Test(priority=1)
-	public void verifySubcategoryToUploadNewItem()
-	{
-		WebElement userName=driver.findElement(By.xpath("//input[@placeholder='Username']"));
-		userName.sendKeys("admin");
-		
-		WebElement passWord=driver.findElement(By.xpath("//input[@placeholder='Password']"));
-		passWord.sendKeys("admin");
-		
-		WebElement rememberMe=driver.findElement(By.xpath("//label[@for='remember']"));
-		rememberMe.click();
-		
-		WebElement signIn=driver.findElement(By.xpath("//button[@type='submit']"));
-		signIn.click();
-		
-		WebElement subCategoryClick=driver.findElement(By.xpath("//a[@href='https://groceryapp.uniqassosiates.com/admin/list-sub-category' and @class=' nav-link']"));
-		subCategoryClick.click();
-		
-		WebElement newClick=driver.findElement(By.xpath("//a[@onclick='click_button(1)']"));
-		newClick.click();
-		
-		WebElement categoryClick=driver.findElement(By.xpath("//select[@id='cat_id']"));
-		Select select=new Select(categoryClick);
-		select.selectByValue("556");
-		
-		WebElement subCategoryClick1=driver.findElement(By.xpath("//input[@id='subcategory']"));
-		subCategoryClick1.sendKeys("Necklace");
-		
-		WebElement uploadImage=driver.findElement(By.xpath("//input[@id='main_img']"));
-		uploadImage.sendKeys("C:\\Users\\Lenovo\\OneDrive\\Desktop\\necklace.jpeg");
-		
-		WebElement saveClick=driver.findElement(By.xpath("//button[@class='btn btn-danger']"));
-		saveClick.click();}*/
 		
 	@Test(priority=1,description="Verify user able to add new items in subcategoryusing New Button")
 	public void verifyWhetherUserAbleToAddNewItemInSubcategoryUsingNewButton() throws IOException
