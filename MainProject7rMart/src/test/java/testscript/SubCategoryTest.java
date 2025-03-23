@@ -66,7 +66,7 @@ public class SubCategoryTest extends Base {
 		SubCategoryPage subcategory1;
 		subcategory1=hometest.clickOnSubCategoryButton();
 		
-	subcategory1.ClickonNewClick().clickOnCategory(categoryClick1).clickONSubCategory(subcategory).toUploadImage(uploadImagepath).toSave();
+	subcategory1.ClickonNewClick().clickOnCategory(categoryClick1).clickONSubCategory(subcategory).toUploadImage().toSave();
 	//subcategory1.selectImageOfSubCategoryCreationPage();
 		
 		

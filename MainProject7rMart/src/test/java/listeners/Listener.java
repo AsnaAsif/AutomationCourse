@@ -20,10 +20,9 @@ public class Listener extends Base implements ITestListener {
 
 	ThreadLocal<ExtentTest> extentTest = new ThreadLocal<ExtentTest>();
 
-	public void onTestStart(ITestResult result) // before execution , execution method name fetched
+	public void onTestStart(ITestResult result) 
 	{
 
-		// itest is interface
 
 		ITestListener.super.onTestStart(result);
 
@@ -33,8 +32,7 @@ public class Listener extends Base implements ITestListener {
 
 	}
 
-	public void onTestSuccess(ITestResult result)// itesytresult monitor how many pass, fails, etc and 
-	//itest success used to monitor the success that means pass
+	public void onTestSuccess(ITestResult result)
 	{
 
 		ITestListener.super.onTestSuccess(result);

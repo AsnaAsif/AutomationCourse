@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
+import constants.Constants;
 import utilities.PageUtility;
 
 public class SubCategoryPage {
@@ -81,16 +82,13 @@ public class SubCategoryPage {
 		return this;
 
 	}
-	public SubCategoryPage toUploadImage(String uploadImagepath)
+	public SubCategoryPage toUploadImage()
 	{
-		uploadImage.sendKeys(uploadImagepath);
+		uploadImage.sendKeys(Constants.IMAGEFILE);
 		return this;
 
 	}
-	//public SubCategoryPage selectImageOfSubCategoryCreationPage() {
-	//imageUploadButton.sendKeys(Constants.IMAGEFILE);
-	//return this;
-//}
+	
 	public SubCategoryPage toSave()
 	{
 		saveClick.click();
@@ -108,7 +106,7 @@ public class SubCategoryPage {
 	public SubCategoryPage  selectCategory()
 	{
 		PageUtility page=new PageUtility();
-		page.selectDropdownWithIndex(category, 3);
+		page.selectDropdownWithIndex(category, 2);
 		return this;
 	
 	}
