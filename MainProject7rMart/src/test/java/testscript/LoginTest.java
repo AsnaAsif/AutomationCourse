@@ -53,8 +53,6 @@ public class LoginTest extends Base {
 	@Test(priority = 4, description = "User login verification with invalid username and invalid password", dataProvider = "loginProvider")
 	public void verifyWhetherUserAbleToLoginWithinValidUsernameAndinValidPassword(String username, String password)
 			throws IOException {
-		// String username=ExcelUtilities.readStringData(2, 0,"LoginPage");
-		// String password=ExcelUtilities.readStringData(2, 1,"LoginPage");
 		LoginPage login = new LoginPage(driver);
 		login.enterUsernameOnUsernameField(username).enterPasswordOnPassWordField(password).clickOnRememberMe()
 				.clickOnSignIN();

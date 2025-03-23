@@ -14,9 +14,6 @@ public class AdminUserPage {
 		PageFactory.initElements(driver, this);
 	}
 
-	//@FindBy(xpath = "//i[@class='nav-icon fas fa-users']")
-	//private WebElement adminusers;
-
 	@FindBy(xpath = "//p[text()='Manage Users']")
 	private WebElement manageUsers;
 
@@ -49,91 +46,88 @@ public class AdminUserPage {
 
 	@FindBy(xpath = "//a[@class='btn btn-rounded btn-warning']")
 	private WebElement resetAdmin;
-	
-	@FindBy (xpath="//h5[text()=' Alert!']")
+
+	@FindBy(xpath = "//h5[text()=' Alert!']")
 	private WebElement adminAlertDisplay;
-	
-	@FindBy (xpath="//h4[text()='Search Admin Users']")
+
+	@FindBy(xpath = "//h4[text()='Search Admin Users']")
 	private WebElement searchadminuserdisplay;
-	
-	@FindBy (xpath="//h4[text()='Admin Users']")
+
+	@FindBy(xpath = "//h4[text()='Admin Users']")
 	private WebElement adminusersresetdisplay;
 
-	//public void clickOnAdminUser() {
-		//adminusers.click();
-			
-	//}
+	// public void clickOnAdminUser() {
+	// adminusers.click();
+
+	// }
 
 	public AdminUserPage clickOnManageUsers() {
 		manageUsers.click();
 		return this;
 	}
 
-	public  AdminUserPage clickOnNewAdmin() {
+	public AdminUserPage clickOnNewAdmin() {
 		newAdmin.click();
 		return this;
 	}
 
-	public  AdminUserPage enterTheUserName(String userAdmin) {
+	public AdminUserPage enterTheUserName(String userAdmin) {
 		clickUser.sendKeys(userAdmin);
 		return this;
 	}
 
-	public  AdminUserPage enterThePassword(String passwordAdmin) {
+	public AdminUserPage enterThePassword(String passwordAdmin) {
 		clickPassword.sendKeys(passwordAdmin);
 		return this;
-		
+
 	}
 
-	public  AdminUserPage selectTheUserType(String userType) {
+	public AdminUserPage selectTheUserType(String userType) {
 		Select select = new Select(addUserType);
 		select.selectByVisibleText(userType);
 		return this;
 	}
 
-	public  AdminUserPage saveTheAdminUserDetails() {
+	public AdminUserPage saveTheAdminUserDetails() {
 		save.click();
 		return this;
 	}
 
-	public  AdminUserPage searchAdminUser() {
+	public AdminUserPage searchAdminUser() {
 		searchclick.click();
 		return this;
 	}
 
-	public  AdminUserPage searchUserName(String userAdmin) {
+	public AdminUserPage searchUserName(String userAdmin) {
 		searchUser.sendKeys(userAdmin);
 		return this;
 	}
 
-	public  AdminUserPage selectUserType() {
+	public AdminUserPage selectUserType() {
 		Select select1 = new Select(searchuserType);
 		select1.selectByIndex(2);
 		return this;
 	}
 
-	public  AdminUserPage clickonSearchButton() {
+	public AdminUserPage clickonSearchButton() {
 		searchClick1.click();
 		return this;
 	}
 
-	public  AdminUserPage clickResearchButton() {
+	public AdminUserPage clickResearchButton() {
 		resetAdmin.click();
 		return this;
 	}
-	
-	public boolean adminAlertdisplayed()
-	{
+
+	public boolean adminAlertdisplayed() {
 		return adminAlertDisplay.isDisplayed();
 	}
-	
-	public boolean adminsearchdisplay()
-	{
-		return searchadminuserdisplay.isDisplayed(); 
+
+	public boolean adminsearchdisplay() {
+		return searchadminuserdisplay.isDisplayed();
 	}
-	
-	public boolean adminUserRefreshdisplay()
-	{
+
+	public boolean adminUserRefreshdisplay() {
 		return adminusersresetdisplay.isDisplayed();
 	}
-}	
+}

@@ -25,11 +25,8 @@ public class AdminUsersTest extends Base {
 		FakerUtility faker = new FakerUtility();
 		String userAdmin = faker.createRandomNmae();
 		String passwordAdmin = faker.createRandomPassword();
-		// String userAdmin = ExcelUtilities.readStringData(1, 0, "AdminUser");
-		// String passwordAdmin = ExcelUtilities.readStringData(1, 1, "AdminUser");
 		String addUserType = ExcelUtilities.readStringData(1, 2, "AdminUser");
 
-		// AdminUserPage admin = new AdminUserPage(driver);
 		AdminUserPage admin;
 		admin = hometest.clickOnAdminUser();
 		admin.clickOnManageUsers().clickOnNewAdmin().enterTheUserName(userAdmin).enterThePassword(passwordAdmin)
@@ -51,7 +48,6 @@ public class AdminUsersTest extends Base {
 
 		String userAdmin = ExcelUtilities.readStringData(1, 0, "AdminUser");
 
-		// AdminUserPage admin = new AdminUserPage(driver);
 		AdminUserPage admin;
 		admin = hometest.clickOnAdminUser();
 		admin.clickOnManageUsers().searchAdminUser().searchUserName(userAdmin).selectUserType().clickonSearchButton();
@@ -70,7 +66,6 @@ public class AdminUsersTest extends Base {
 		HomePage hometest;
 		hometest = login.clickOnSignIN();
 
-		// AdminUserPage admin = new AdminUserPage(driver);
 		AdminUserPage admin;
 		admin = hometest.clickOnAdminUser();
 		admin.clickOnManageUsers().clickResearchButton();
